@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="SamiYusufApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,149 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sami-yusuf-banner" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-Yi-uS8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="XEz-60-sCK"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDc-tY-4G8">
+                                <rect key="frame" x="0.0" y="175" width="375" height="37"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bxT-1V-8hj">
+                                        <rect key="frame" x="8" y="3" width="359" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C4-c1-U4A">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dN-km-IOS">
+                                                <rect key="frame" x="119.5" y="0.0" width="120" height="33"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X9-RW-hPI">
+                                                <rect key="frame" x="239.5" y="0.0" width="119.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="XTJ-YY-8rf"/>
+                                    <constraint firstItem="bxT-1V-8hj" firstAttribute="top" secondItem="xDc-tY-4G8" secondAttribute="top" constant="3" id="eg9-5M-jmg"/>
+                                    <constraint firstAttribute="trailing" secondItem="bxT-1V-8hj" secondAttribute="trailing" constant="8" id="pgX-lA-aYW"/>
+                                    <constraint firstItem="bxT-1V-8hj" firstAttribute="leading" secondItem="xDc-tY-4G8" secondAttribute="leading" constant="8" id="qoN-59-tXR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Muu-1M-PU3">
+                                <rect key="frame" x="0.0" y="212" width="375" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="SRC-cZ-rRK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRC-cZ-rRK" id="vMC-Sy-5u9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sami-yusuf-banner" translatesAutoresizingMaskIntoConstraints="NO" id="57c-0I-gcO">
+                                                    <rect key="frame" x="8" y="17" width="68" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="68" id="jV8-QX-1V3"/>
+                                                        <constraint firstAttribute="width" constant="68" id="uyc-J1-DPt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasbi Rabbi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqm-F2-xC4">
+                                                    <rect key="frame" x="84" y="17" width="283" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="68" id="LCJ-Zk-E79"/>
+                                                        <constraint firstAttribute="width" constant="283" id="pTk-mY-Zju"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="46"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="lqm-F2-xC4" firstAttribute="leading" secondItem="57c-0I-gcO" secondAttribute="trailing" constant="8" id="2XQ-4C-egy"/>
+                                                <constraint firstItem="lqm-F2-xC4" firstAttribute="trailing" secondItem="vMC-Sy-5u9" secondAttribute="trailingMargin" id="FrN-Sf-Ecv"/>
+                                                <constraint firstItem="lqm-F2-xC4" firstAttribute="centerY" secondItem="vMC-Sy-5u9" secondAttribute="centerY" id="I8m-zf-g0p"/>
+                                                <constraint firstItem="57c-0I-gcO" firstAttribute="leading" secondItem="vMC-Sy-5u9" secondAttribute="leadingMargin" id="hlm-uZ-vfc"/>
+                                                <constraint firstItem="57c-0I-gcO" firstAttribute="centerY" secondItem="vMC-Sy-5u9" secondAttribute="centerY" id="o8b-58-kWZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="v9u-Yi-uS8" secondAttribute="trailing" id="10J-RW-bns"/>
+                            <constraint firstAttribute="trailing" secondItem="Muu-1M-PU3" secondAttribute="trailing" id="2Mu-a4-56M"/>
+                            <constraint firstItem="xDc-tY-4G8" firstAttribute="top" secondItem="v9u-Yi-uS8" secondAttribute="bottom" id="475-Cr-Vfc"/>
+                            <constraint firstItem="xDc-tY-4G8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CXx-tD-bCh"/>
+                            <constraint firstItem="v9u-Yi-uS8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CkJ-bX-m0Y"/>
+                            <constraint firstItem="v9u-Yi-uS8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gin-Kl-ipq"/>
+                            <constraint firstItem="Muu-1M-PU3" firstAttribute="top" secondItem="xDc-tY-4G8" secondAttribute="bottom" id="azG-Ba-R6K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Muu-1M-PU3" secondAttribute="bottom" id="gVq-cs-A4y"/>
+                            <constraint firstItem="Muu-1M-PU3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p46-XF-TJO"/>
+                            <constraint firstAttribute="trailing" secondItem="xDc-tY-4G8" secondAttribute="trailing" id="pxA-Qv-QCw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="xYD-wD-acS" kind="showDetail" identifier="VideoVC" id="XFX-n0-8aj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="den-1v-Cwu">
+            <objects>
+                <viewController id="xYD-wD-acS" customClass="VideoVC" customModule="SamiYusufApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qKL-t5-l9D"/>
+                        <viewControllerLayoutGuide type="bottom" id="TFR-Is-XDR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Pj-eY-IUB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-x2-puk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="gLo-jg-rjd"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b0V-x2-puk" firstAttribute="leading" secondItem="6Pj-eY-IUB" secondAttribute="leading" id="2hd-td-bcL"/>
+                            <constraint firstAttribute="trailing" secondItem="b0V-x2-puk" secondAttribute="trailing" id="DoR-Gg-Ohs"/>
+                            <constraint firstItem="b0V-x2-puk" firstAttribute="top" secondItem="6Pj-eY-IUB" secondAttribute="top" id="ypv-c8-QLC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m19-Zs-ev9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sami-yusuf-banner" width="1280" height="534"/>
+    </resources>
 </document>
