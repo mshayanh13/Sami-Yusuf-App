@@ -75,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="212" width="375" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="SRC-cZ-rRK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SamiYusufCell" rowHeight="104" id="SRC-cZ-rRK" customClass="SamiYusufCell" customModule="SamiYusufApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRC-cZ-rRK" id="vMC-Sy-5u9">
@@ -89,7 +89,7 @@
                                                         <constraint firstAttribute="width" constant="68" id="uyc-J1-DPt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasbi Rabbi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqm-F2-xC4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Came To Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqm-F2-xC4">
                                                     <rect key="frame" x="84" y="17" width="283" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="68" id="LCJ-Zk-E79"/>
@@ -109,6 +109,10 @@
                                                 <constraint firstItem="57c-0I-gcO" firstAttribute="centerY" secondItem="vMC-Sy-5u9" secondAttribute="centerY" id="o8b-58-kWZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="57c-0I-gcO" id="Xqb-q2-4cp"/>
+                                            <outlet property="videoTitle" destination="lqm-F2-xC4" id="wJj-Gd-DeT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -128,6 +132,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Muu-1M-PU3" id="Hg9-Jm-oVk"/>
                         <segue destination="xYD-wD-acS" kind="showDetail" identifier="VideoVC" id="XFX-n0-8aj"/>
                     </connections>
                 </viewController>
