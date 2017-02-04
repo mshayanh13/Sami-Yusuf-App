@@ -168,14 +168,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktW-mk-hZF">
+                                <rect key="frame" x="16" y="579" width="343" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="y7w-Ns-6JV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="xYD-wD-acS" eventType="touchUpInside" id="2fB-Uy-aAe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b0V-x2-puk" firstAttribute="leading" secondItem="6Pj-eY-IUB" secondAttribute="leading" id="2hd-td-bcL"/>
                             <constraint firstAttribute="trailing" secondItem="b0V-x2-puk" secondAttribute="trailing" id="DoR-Gg-Ohs"/>
+                            <constraint firstItem="TFR-Is-XDR" firstAttribute="top" secondItem="ktW-mk-hZF" secondAttribute="bottom" constant="20" id="Dxq-8J-KX9"/>
                             <constraint firstItem="Ujl-gU-tXZ" firstAttribute="leading" secondItem="6Pj-eY-IUB" secondAttribute="leadingMargin" constant="5" id="J81-wG-6xs"/>
+                            <constraint firstItem="ktW-mk-hZF" firstAttribute="leading" secondItem="6Pj-eY-IUB" secondAttribute="leadingMargin" id="R1X-Pt-eHn"/>
+                            <constraint firstItem="ktW-mk-hZF" firstAttribute="trailing" secondItem="6Pj-eY-IUB" secondAttribute="trailingMargin" id="Rhf-s7-em2"/>
                             <constraint firstItem="Ujl-gU-tXZ" firstAttribute="trailing" secondItem="6Pj-eY-IUB" secondAttribute="trailingMargin" constant="5" id="q4u-8N-fg3"/>
                             <constraint firstItem="Ujl-gU-tXZ" firstAttribute="top" secondItem="b0V-x2-puk" secondAttribute="bottom" constant="50" id="teO-yB-5hJ"/>
+                            <constraint firstItem="ktW-mk-hZF" firstAttribute="centerX" secondItem="6Pj-eY-IUB" secondAttribute="centerX" id="v0A-Og-7Bx"/>
                             <constraint firstItem="b0V-x2-puk" firstAttribute="top" secondItem="6Pj-eY-IUB" secondAttribute="top" id="ypv-c8-QLC"/>
                         </constraints>
                     </view>
